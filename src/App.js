@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 
 function App() {
 
