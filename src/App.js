@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
+      <NewExpense></NewExpense>
       <Expenses items ={expenses}></Expenses>
     </div>
   );
