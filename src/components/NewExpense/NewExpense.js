@@ -1,9 +1,17 @@
-
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
+import {useState} from 'react';
 
 const NewExpense =(props) => 
 {
+    let [isFormEnabled, setFormEnabledFlag]=useState(false);
+
+    const formDisplayButtonHandler = (event) =>
+    {
+        event.preventDefault();
+        console.log('button clicked to display form');
+        setFormEnabledFlag(true);
+    }
 
     const saveExpenseDataHandler =(enteredExpenseData) => {
 
@@ -16,12 +24,30 @@ const NewExpense =(props) =>
         props.onAddExpenseData(expenseData);
 
     }
+
+    const formCancelHandler =() => {
+        setFormEnabledFlag(false);
+    }
+    
+    if(isFormEnabled)
+    {
     return (
         <div className="new-expense">
-            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>
+            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel ={formCancelHandler}></ExpenseForm>
         </div>
-
     );
+    }
+
+    else
+    {   
+        
+        return (
+            <div className="new-expense">
+            <button type="submit" onClick={formDisplayButtonHandler}>Add New Expense</button>;
+            </div>
+            )
+
+    }
 
 };
 

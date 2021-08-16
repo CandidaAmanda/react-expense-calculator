@@ -6,11 +6,11 @@ import NewExpense from './components/NewExpense/NewExpense';
 import { useState } from 'react';
 
 const DUMMY_EXPENSES =[
-  {id: 'e1', date : new Date (2021,7,28),title : 'Shopping',amount: 2000},
+  {id: 'e1', date : new Date (2021,7,28),title : 'Shopping',amount: 200},
   {id: 'e2', date : new Date (2021,7,29),title : 'Lunch',amount:500},
   {id: 'e3', date : new Date (2020,7,24),title : 'Veggies',amount: 200},
-  {id: 'e4', date : new Date (2019,7,29),title : 'Market',amount:500},
-  {id: 'e5', date : new Date (2022,7,24),title : 'Party',amount: 200}
+  {id: 'e4', date : new Date (2019,5,29),title : 'Market',amount:500},
+  {id: 'e5', date : new Date (2020,6,24),title : 'Party',amount: 200}
 
 
 ];
